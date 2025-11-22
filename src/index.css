@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Make scrollbar transparent */
+::-webkit-scrollbar {
+  width: 2px;          
+}
+
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background: red; 
+  width: 10px;
+
+}
