@@ -2,6 +2,28 @@ import Logo from "../../public/svg/Logo.min.svg";
 import Arrow from "../../public/svg/arrow-right-svg.svg";
 import Me from "../assets/homePagePhoto/me.png";
 
+import { Canvas, useFrame } from "@react-three/fiber";
+import { Model } from "../components/Model";
+import { useRef } from "react";
+import * as THREE from "three";
+import { MarqueeComponent } from "../components/marquee";
+
+function RotatingModel() {
+  const groupRef = useRef<THREE.Group>(null);
+
+  useFrame(() => {
+    if (groupRef.current) {
+      groupRef.current.rotation.y += 0.01;
+    }
+  });
+
+  return (
+    <group ref={groupRef} scale={[50, 50, 50]}> {/* hna kberna b moderate */}
+      <Model />
+    </group>
+  );
+}
+
 export function HomePage() {
   return (
     <>
@@ -48,10 +70,12 @@ export function HomePage() {
 
             <div className="bg-whte w-2/4 h-full  ">
               <div className=" w-full h-52  text-7xl text-left pt-10">
-                <h2 className=" uppercase text-red-700 font-medium">
+                <h2 className="select-none
+                 uppercase text-red-700 font-medium">
                   zouhair{" "}
                 </h2>
-                <h2 className=" uppercase text-red-700 font-light"> kahtal</h2>
+                <h2 className="select-none
+                 uppercase text-red-700 font-light"> kahtal</h2>
                 <h5 className="text-sm text-red-700  uppercase flex items-center ">
                   <img src={Arrow} className="w-5 " alt="arrow" />A front-end
                   developer
@@ -98,17 +122,42 @@ export function HomePage() {
             <div className="w-2/4 h-full ">
               <h1 className="text-red-500 uppercase select-none">storey</h1>
 
+<div className="w-full  pl-5">
+
               <h1
-              className="text-red-700 text-4xl uppercase mt-16 italic font-bold "
+              className="text-red-700 text-4xl uppercase mt-16 italic font-bold flex items-center ml-2  "
               >
                 
-                storey </h1>
+                  storey <span className="rotate-90  mt-2">        <img src={Arrow} className="w-10  " alt="arrow" /></span></h1>
+
+
+                   <h2 className="select-none
+                 uppercase text-red-700 font-light text-3xl"> The story starts</h2>
+               <p className="text-red-700 max-w-[450px] mt-6">
+                 when I first explored the world of web design, fascinated by how lines of code could create something interactive and beautiful.
+                It was during my early days in tech that I realized I could combine logic and creativity.
+                But my passion isn’t limited to screens—I also love drawing. With every stroke of a pencil, I find a way to express what words can’t.               
+               </p>
+               <p  className="text-red-600 text-4xl uppercase font-extrabold mt-10"> Between coding and sketching, I’ve found a balance that keeps me inspired every day. </p>
+               
+                </div>
+
+
+
+
             </div>
-          </div>
+             <div className="w-2/4 h-full">
+    <Canvas camera={{ position: [0, 2, 7], fov: 50 }}> 
+  <ambientLight intensity={0.3} />
+  <directionalLight position={[5, 5, 5]} intensity={1} color="red" />
+  <RotatingModel />
+</Canvas>
+    </div>
+      </div>
           {/*  div skils */}
           <div className="border-b border-red-700 w-full h-28 flex items-center justify-center  ">
             <div className="w-full h-full border-x border-red-700 max-w-[1889px]">
-              <h1 className="text-red-500">div skils</h1>
+              <MarqueeComponent/>
             </div>
           </div>
 
