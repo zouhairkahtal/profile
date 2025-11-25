@@ -8,7 +8,7 @@ type GLTFResult = {
     quill_pen_3_low_lambert1_0: THREE.Mesh<THREE.BufferGeometry>
   }
   materials: {
-    lambert1: THREE.MeshLambertMaterial // غالباً هادي هي الصحيحة
+    lambert1: THREE.MeshLambertMaterial 
   }
 }
 
