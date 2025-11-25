@@ -4,11 +4,13 @@ import Me from "../assets/homePagePhoto/me.png";
 
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Model } from "../components/Model";
+
+
 import { useRef } from "react";
 import * as THREE from "three";
-import { MarqueeComponent } from "../components/marquee";
+import { MarqueeComponent } from "../components/Marquee";
 
-function RotatingModel() {
+function RotatingModel1() {
   const groupRef = useRef<THREE.Group>(null);
 
   useFrame(() => {
@@ -20,9 +22,11 @@ function RotatingModel() {
   return (
     <group ref={groupRef} scale={[50, 50, 50]}> {/* hna kberna b moderate */}
       <Model />
+      
     </group>
   );
 }
+
 
 export function HomePage() {
   return (
@@ -146,25 +150,37 @@ export function HomePage() {
 
 
             </div>
-             <div className="w-2/4 h-full">
-    <Canvas camera={{ position: [0, 2, 7], fov: 50 }}> 
+             <div className="w-2/4 h-full ">
+    <Canvas camera={{ position: [0, 1.5, 6], fov: 50 }}> 
   <ambientLight intensity={0.3} />
   <directionalLight position={[5, 5, 5]} intensity={1} color="red" />
-  <RotatingModel />
+  <RotatingModel1 />
 </Canvas>
     </div>
       </div>
-          {/*  div skils */}
+          {/*  div skills */}
           <div className="border-b border-red-700 w-full h-28 flex items-center justify-center  ">
             <div className="w-full h-full border-x border-red-700 max-w-[1889px]">
               <MarqueeComponent/>
             </div>
           </div>
 
-          {/* about skils */}
-          <div className="w-full  border-x  border-red-700 max-w-[1889px] h-[800px]">
-            <h1 className="text-red-500">about skils</h1>
-          </div>
+          {/* about skills */}
+          <div className="w-full  border-x  border-red-700 max-w-[1889px] h-[800px] flex">
+            <div className="w-2/4 h-full">
+
+            </div>
+
+            <div className="w-2/4 h-full ">
+              
+            {/* <h1 className="text-red-500 uppercase">skills</h1> */}
+
+            </div>
+
+
+
+            </div>
+
         </div>
 
         {/* contact btn */}
