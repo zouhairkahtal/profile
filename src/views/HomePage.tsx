@@ -4,7 +4,7 @@ import Me from "../assets/homePagePhoto/me.png";
 
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Model } from "../components/Model";
-
+import projects from '../projects_simple.json';
 
 import { useRef } from "react";
 import * as THREE from "three";
@@ -165,17 +165,59 @@ export function HomePage() {
             </div>
           </div>
 
-          {/* about skills */}
-          <div className="w-full  border-x  border-red-700 max-w-[1889px] h-[800px] flex">
-            <div className="w-2/4 h-full">
+          {/* project */}
+          <div className="w-full  border-x  border-red-700 max-w-[1889px] ">
+         
 
-            </div>
-
-            <div className="w-2/4 h-full ">
+            <div className="w-full h-[40px] ">
               
-            {/* <h1 className="text-red-500 uppercase">skills</h1> */}
+            <h1 className="text-red-500 uppercase">project</h1>
 
             </div>
+
+
+
+    <div className="w-full  ">
+      <div className=" w-full  flex flex-col">
+
+
+        {projects.map((p,i)=>(
+  <div key={i} className=" flex items-center w-full justify-between  border-y border-red-700 ">
+        <div className=" flex items-start  ">
+          <h1 className="text-red-600 text-8xl uppercase font-extrabold italic">{p.name}</h1>
+          <div className="flex mt-5 ml-1">
+
+          <span className="text-red-600 ml-1 uppercase border border-red-600 rounded-full p-1 text-xs">{p.is_website ? "website" : "not a website"}</span>
+          <span className="text-red-600  uppercase border border-red-600 rounded-full p-1 text-xs">{p.languages}</span>
+          </div>
+        </div>
+<button className="text-red-600 text-4xl uppercase font-extrabold mr-5">
+  open
+</button>
+        </div>
+        ))}
+
+        {/* <div className=" flex items-center w-full justify-between ">
+        <div className=" flex items-center  ">
+          <h1 className="text-red-600 text-8xl uppercase font-extrabold italic">project</h1>
+          <div className="flex">
+
+          <span className="text-red-600 ml-6 uppercase border border-red-600 rounded-full p-1 text-xs">website</span>
+          <h2 className="text-red-600  uppercase border border-red-600 rounded-full p-1 text-xs">html,css,js</h2>
+          </div>
+        </div>
+<button className="text-red-600 text-4xl uppercase font-extrabold mr-5">
+  open
+</button>
+        </div> */}
+
+
+
+      </div>
+
+
+    </div>
+
 
 
 
@@ -185,16 +227,26 @@ export function HomePage() {
 
         {/* contact btn */}
 
-        <div className="border-b border-red-700 w-full h-28 flex items-center justify-center px-4 ">
-          <div className="w-full h-full border-x border-red-700 max-w-[1889px]">
-            <h1 className="text-red-500">contact btn</h1>
+        <div className="border-b border-red-700 w-full h-48 flex items-center justify-center px-4 ">
+          <div className="w-full h-full border-x border-red-700 max-w-[1889px]  flex items-center justify-center">
+            <div>
+
+<img src={Arrow} className="w-15 mr-6 " alt="arrow" />
+            </div>
+              <button className="uppercase py-6 px-12 rounded-md font-semibold bg-red-600">
+                contact Me!
+              </button>
+<div className="rotate-180">
+
+            <img src={Arrow} className="w-15 mr-6 " alt="arrow" />
+</div>
           </div>
         </div>
         {/* footer */}
 
         <div className="border-b border-red-700 w-full h-48 flex items-center justify-center px-4 ">
           <div className="w-full h-full border-x border-red-700 max-w-[1889px]">
-            <h1 className="text-red-500">footer</h1>
+            <h1 className="text-red-500 ">footer</h1>
           </div>
         </div>
 

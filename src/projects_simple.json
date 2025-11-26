@@ -1,0 +1,67 @@
+[
+  {
+    "name": "cat-info",
+    "is_website": true,
+    "languages": [
+      "TypeScript,",
+   
+      "React"
+    ]
+  },
+  {
+    "name": "TicTac",
+    "is_website": true,
+    "languages": [
+       "TypeScript,",
+   
+      "React"
+    ]
+  },
+  {
+    "name": "multi-step-form ",
+    "is_website": true,
+    "languages": [
+       "TypeScript,",
+   
+      "React"
+    ]
+  },
+  {
+    "name": "interactive-card",
+    "is_website": true,
+    "languages": [
+   "TypeScript,",
+   
+      "React"
+    ]
+  },
+  {
+    "name": "zouhair-Portfolio1",
+    "is_website": true,
+    "languages": [
+      "html,",
+      "js,",
+      "css"
+    ]
+  },
+  {
+    "name": "repayment-calculator",
+    "is_website": true,
+    "languages": [
+      "html,",
+      "js,",
+      "tailwind,",
+      "css"
+    ]
+  }
+  ,
+  {
+    "name": "age-calculator",
+    "is_website": true,
+    "languages": [
+      "html,",
+      "js,",
+      "css"
+    ]
+  }
+]
