@@ -1,6 +1,11 @@
 import Logo from "../../public/svg/Logo.min.svg";
 import Arrow from "../../public/svg/arrow-right-svg.svg";
 import Me from "../assets/homePagePhoto/me.png";
+import Instagram  from "../../public/svg/media/instagram-svgrepo-com.svg";
+import Github  from "../../public/svg/media/github-142-svgrepo-com.svg";
+import Linkedin  from "../../public/svg/media/linkedin-svgrepo-com.svg";
+
+import ClickSpark from '../components/ClickSpark';
 
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Model } from "../components/Model";
@@ -30,7 +35,15 @@ function RotatingModel1() {
 
 export function HomePage() {
   return (
+  
     <>
+    <ClickSpark
+  sparkColor='#bb0000'
+  sparkSize={20}
+  sparkRadius={50}
+  sparkCount={6}
+  duration={300}
+>
       <div className="bg-black w-full  flex flex-col">
         {/* nav */}
         <div className="border-b border-red-700 w-full h-28 flex items-center justify-center px-4 ">
@@ -39,12 +52,12 @@ export function HomePage() {
               <img src={Logo} alt="logo" className=" w-48" />
 
               <ul className="flex text-red-700">
-                <li className=" py-4 mx-8 text-base font-semibold border-b border-red-700">
+                <li className=" py-4 mx-8 text-base font-semibold border-b border-red-700 hover:text-red-500 hover:border-red-500">
                   HOME
                 </li>
-                <li className=" py-4 mx-8 text-base font-semibold">PROJECT</li>
+                <li className=" py-4 mx-8 text-base font-semibold hover:border-b border-red-500 hover:text-red-500 cursor-pointer">PROJECT</li>
                 <li>
-                  <button className="bg-red-700 text-black py-4 px-8 text-base font-semibold">
+                  <button className="bg-red-700 text-black py-4 px-8 text-base font-semibold hover:bg-red-500">
                     CONTACT ME
                   </button>
                 </li>
@@ -55,19 +68,17 @@ export function HomePage() {
         {/* hero section */}
         <div
           className={`border-b border-red-700 w-full h-[800px] flex items-center justify-center px-4 bg-[url('./public/svg/backGroundSvg.svg')] `}
-        >
+          >
           <div className="w-full h-full border-x border-red-700 max-w-[1889px] flex ">
             <div className="bg-whte w-2/4 h-full  ">
-              <h1 className="text-red-500 font-extralight relative uppercase select-none">
-                hero section
-              </h1>
+             
 
               <div className="bg-red-700 w-[550px] h-[450px] mt-56 flex items-end justify-end shadow-[100px_-100px_1000px_-47px_#bb0000]  ">
                 <img src={Me} alt="me" />
               </div>
               <div className=" mt-10 select-none ">
-                <h1 className="text-5xl font-extrabold text-red-700 border-b-8 border-red-700 w-12">
-                  01
+                <h1 className="text-5xl font-extrabold text-red-700 border-b-8 border-red-700 w-12 ">
+                  ٠١
                 </h1>
               </div>
             </div>
@@ -79,7 +90,7 @@ export function HomePage() {
                   zouhair{" "}
                 </h2>
                 <h2 className="select-none
-                 uppercase text-red-700 font-light"> kahtal</h2>
+                  text-red-700 font-light  font-reem mb-1"> قحطل</h2>
                 <h5 className="text-sm text-red-700  uppercase flex items-center ">
                   <img src={Arrow} className="w-5 " alt="arrow" />A front-end
                   developer
@@ -124,15 +135,15 @@ export function HomePage() {
           {/*storet */}
           <div className="w-full  border-x border-b border-red-700 max-w-[1889px] h-[800px] flex">
             <div className="w-2/4 h-full ">
-              <h1 className="text-red-500 uppercase select-none">storey</h1>
+              <h1 className="text-red-500 uppercase select-none">story</h1>
 
 <div className="w-full  pl-5">
 
               <h1
-              className="text-red-700 text-4xl uppercase mt-16 italic font-bold flex items-center ml-2  "
+              className="text-red-700 text-4xl uppercase mt-16 italic font-bold flex items-center ml-2 font-reem "
               >
                 
-                  storey <span className="rotate-90  mt-2">        <img src={Arrow} className="w-10  " alt="arrow" /></span></h1>
+                  قصة <span className="rotate-90  mt-2">        <img src={Arrow} className="w-10  " alt="arrow" /></span></h1>
 
 
                    <h2 className="select-none
@@ -182,7 +193,7 @@ export function HomePage() {
 
 
         {projects.map((p,i)=>(
-  <div key={i} className=" flex items-center w-full justify-between  border-y border-red-700 ">
+          <div key={i} className=" flex items-center w-full justify-between  border-y border-red-700 ">
         <div className=" flex items-start  ">
           <h1 className="text-red-600 text-8xl uppercase font-extrabold italic">{p.name}</h1>
           <div className="flex mt-5 ml-1">
@@ -199,16 +210,16 @@ export function HomePage() {
 
         {/* <div className=" flex items-center w-full justify-between ">
         <div className=" flex items-center  ">
-          <h1 className="text-red-600 text-8xl uppercase font-extrabold italic">project</h1>
-          <div className="flex">
-
-          <span className="text-red-600 ml-6 uppercase border border-red-600 rounded-full p-1 text-xs">website</span>
-          <h2 className="text-red-600  uppercase border border-red-600 rounded-full p-1 text-xs">html,css,js</h2>
-          </div>
+        <h1 className="text-red-600 text-8xl uppercase font-extrabold italic">project</h1>
+        <div className="flex">
+        
+        <span className="text-red-600 ml-6 uppercase border border-red-600 rounded-full p-1 text-xs">website</span>
+        <h2 className="text-red-600  uppercase border border-red-600 rounded-full p-1 text-xs">html,css,js</h2>
         </div>
-<button className="text-red-600 text-4xl uppercase font-extrabold mr-5">
-  open
-</button>
+        </div>
+        <button className="text-red-600 text-4xl uppercase font-extrabold mr-5">
+        open
+        </button>
         </div> */}
 
 
@@ -246,12 +257,29 @@ export function HomePage() {
 
         <div className="border-b border-red-700 w-full h-48 flex items-center justify-center px-4 ">
           <div className="w-full h-full border-x border-red-700 max-w-[1889px]">
-            <h1 className="text-red-500 ">footer</h1>
+        
+
+            <div className=" w-full h-full flex justify-between items-center">
+<div className=" flex h-full items-center  gap-2 ml-5 ">
+
+          <img className="w-10" src={Instagram} alt="instagram" />
+          <img className="w-10" src={Github} alt="githube" />
+          <img className="w-10" src={Linkedin} alt="Linkedin" />
+</div>
+<div className="h-full flex items-end mb-8">
+<h1 className="text-3xl text-red-800  flex items-center mr-5 font-reem">
+  © زهير قحطل. جميع الحقوق محفوظة. ٢٠٢٥
+</h1>
+</div>
+            </div>
+
+
           </div>
         </div>
 
         {/* /// */}
       </div>
+        </ClickSpark>
     </>
   );
 }

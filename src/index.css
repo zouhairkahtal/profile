@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'ReemKufiInk-Regular';
+  src: url('/src/assets/font/Reem_Kufi_Ink/ReemKufiInk-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 /* Make scrollbar transparent */
 ::-webkit-scrollbar {
