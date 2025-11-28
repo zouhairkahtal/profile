@@ -59,14 +59,14 @@ export function HomePage() {
                     <button className="bg-red-700 text-black py-4 px-8 text-base font-semibold hover:bg-red-500 max-[502px]:px-1 max-[502px]:py-2 max-[502px]:text-sm">
                       CONTACT ME
                     </button>
-                  </li>
+                  </li> 
                 </ul>
               </nav>
             </div>
           </div>
           {/* hero section */}
           <div
-            className={`border-b border-red-700 w-full  flex items-center justify-center   px-4 bg-[url('./public/svg/backGroundSvg.svg')]  `}
+            className={`border-b border-red-700 w-full  flex items-center justify-center   px-4 bg-[url('../public/svg/backGroundSvg.svg')]  `}
           >
             <div className="w-full h-full border-x border-red-700 max-w-[1889px] flex  max-[600px]:flex-col ">
               <div className="bg-whte w-2/4 h-full max-[1250px]:w-auto max-[600px]:w-full   ">
