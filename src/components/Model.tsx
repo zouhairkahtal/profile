@@ -1,5 +1,6 @@
 import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
+import type { JSX } from 'react'
 
 type GLTFResult = {
   nodes: {
@@ -13,7 +14,7 @@ type GLTFResult = {
 }
 
 export function Model(props: JSX.IntrinsicElements['group']) {
-  const { nodes, materials } = useGLTF('/free_quill-pen__lowpoly/scene.gltf') as GLTFResult
+  const { nodes, materials } = useGLTF('/free_quill-pen__lowpoly/scene.gltf') as unknown as GLTFResult
 
   return (
     <group {...props} dispose={null}>
