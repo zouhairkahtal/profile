@@ -1,15 +1,15 @@
 import Logo from "../../public/svg/Logo.min.svg";
 import Arrow from "../../public/svg/arrow-right-svg.svg";
 import Me from "../assets/homePagePhoto/me.png";
-import Instagram  from "../../public/svg/media/instagram-svgrepo-com.svg";
-import Github  from "../../public/svg/media/github-142-svgrepo-com.svg";
-import Linkedin  from "../../public/svg/media/linkedin-svgrepo-com.svg";
+import Instagram from "../../public/svg/media/instagram-svgrepo-com.svg";
+import Github from "../../public/svg/media/github-142-svgrepo-com.svg";
+import Linkedin from "../../public/svg/media/linkedin-svgrepo-com.svg";
 
-import ClickSpark from '../components/ClickSpark';
+import ClickSpark from "../components/ClickSpark";
 
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Model } from "../components/Model";
-import projects from '../projects_simple.json';
+import projects from "../projects_simple.json";
 
 import { useRef } from "react";
 import * as THREE from "three";
@@ -25,190 +25,206 @@ function RotatingModel1() {
   });
 
   return (
-    <group ref={groupRef} scale={[50, 50, 50]}> {/* hna kberna b moderate */}
+    <group ref={groupRef} scale={[50, 50, 50]}>
+      {" "}
+      {/* hna kberna b moderate */}
       <Model />
-      
     </group>
   );
 }
 
-
 export function HomePage() {
   return (
-  
     <>
-    <ClickSpark
-  sparkColor='#bb0000'
-  sparkSize={20}
-  sparkRadius={50}
-  sparkCount={6}
-  duration={300}
->
-      <div className="bg-black w-full  flex flex-col">
-        {/* nav */}
-        <div className="border-b border-red-700 w-full h-28 flex items-center justify-center px-4 ">
-          <div className="w-full h-full border-x border-red-700 max-w-[1889px]">
-            <nav className="flex items-center justify-between ">
-              <img src={Logo} alt="logo" className=" w-48" />
+      <ClickSpark
+        sparkColor="#bb0000"
+        sparkSize={20}
+        sparkRadius={50}
+        sparkCount={6}
+        duration={300}
+      >
+        <div className="bg-black w-full  flex flex-col">
+          {/* nav */}
+          <div className="border-b border-red-700 w-full h-28 flex items-center justify-center px-4 ">
+            <div className="w-full h-full border-x border-red-700 max-w-[1889px]">
+              <nav className="flex items-center justify-between ">
+                <img src={Logo} alt="logo" className=" w-48" />
 
-              <ul className="flex text-red-700">
-                <li className=" py-4 mx-8 text-base font-semibold border-b border-red-700 hover:text-red-500 hover:border-red-500">
-                  HOME
-                </li>
-                <li className=" py-4 mx-8 text-base font-semibold hover:border-b border-red-500 hover:text-red-500 cursor-pointer">PROJECT</li>
-                <li>
-                  <button className="bg-red-700 text-black py-4 px-8 text-base font-semibold hover:bg-red-500">
-                    CONTACT ME
-                  </button>
-                </li>
-              </ul>
-            </nav>
+                <ul className="flex text-red-700">
+                  <li className=" py-4 mx-8 text-base font-semibold border-b border-red-700 hover:text-red-500 hover:border-red-500 max-[502px]:mx-2 max-[502px]:py-2 max-[502px]:text-sm">
+                    HOME
+                  </li>
+
+                  <li>
+                    <button className="bg-red-700 text-black py-4 px-8 text-base font-semibold hover:bg-red-500 max-[502px]:px-1 max-[502px]:py-2 max-[502px]:text-sm">
+                      CONTACT ME
+                    </button>
+                  </li>
+                </ul>
+              </nav>
+            </div>
           </div>
-        </div>
-        {/* hero section */}
-        <div
-          className={`border-b border-red-700 w-full h-[800px] flex items-center justify-center px-4 bg-[url('./public/svg/backGroundSvg.svg')] `}
+          {/* hero section */}
+          <div
+            className={`border-b border-red-700 w-full  flex items-center justify-center   px-4 bg-[url('./public/svg/backGroundSvg.svg')]  `}
           >
-          <div className="w-full h-full border-x border-red-700 max-w-[1889px] flex ">
-            <div className="bg-whte w-2/4 h-full  ">
-             
-
-              <div className="bg-red-700 w-[550px] h-[450px] mt-56 flex items-end justify-end shadow-[100px_-100px_1000px_-47px_#bb0000]  ">
-                <img src={Me} alt="me" />
+            <div className="w-full h-full border-x border-red-700 max-w-[1889px] flex  max-[600px]:flex-col ">
+              <div className="bg-whte w-2/4 h-full max-[1250px]:w-auto max-[600px]:w-full   ">
+                <div className="bg-red-700 max-[600px]:w-full w-[550px] h-[450px]  max-[1050px]:w-[400px]  max-[786px]:w-[300px]  max-[1050px]:h-[380px] max-[786px]:h-[250px] mt-56 max-[1250px]:mt-16  flex items-end justify-end max-[1052px]:justify-center shadow-[100px_-100px_1000px_-47px_#bb0000] max-[1250px]:w-[450px]  ">
+                  <img  src={Me} alt="me" className="max-[1050px]:w-3/4 max-[600px]:w-60" />
+                </div>
+                <div className=" mt-10 select-none ">
+                  <h1 className="text-5xl font-extrabold text-red-700 border-b-8 border-red-700 w-12 ">
+                    ٠١
+                  </h1>
+                </div>
               </div>
-              <div className=" mt-10 select-none ">
-                <h1 className="text-5xl font-extrabold text-red-700 border-b-8 border-red-700 w-12 ">
-                  ٠١
-                </h1>
+
+              <div className="bg-whte w-2/4 h-full  max-[1250px]:w-3/4  max-[1250px]:pl-12 max-[600px]:w-full mb-10 max-[600px]:pl-0 ">
+                <div className=" w-full h-52  text-7xl text-left pt-10  ">
+                  <h2
+                    className="select-none
+                 uppercase text-red-700 font-medium max-[850px]:text-4xl"
+                  >
+                    zouhair
+                  </h2>
+                  <h2
+                    className="select-none
+                  text-red-700 font-light  font-reem mb-1"
+                  >
+                    {" "}
+                    قحطل
+                  </h2>
+                  <h5 className="text-sm text-red-700  uppercase flex items-center ">
+                    <img src={Arrow} className="w-5 " alt="arrow" />A front-end
+                    developer
+                  </h5>
+                </div>
+                <div className=" w-full  mt-20 max-[1250px]:mt-4 max-[600px]:mt-0">
+                  <p className="text-red-600 text-8xl uppercase font-extrabold italic max-[1636px]:text-7xl max-[1134px]:text-4xl max-[786px]:text-2xl">
+                    Transforming{" "}
+                  </p>
+                  <p className="text-red-600 text-4xl uppercase font-extrabold max-[1636px]:text-2xl max-[786px]:text-xl">
+                    ideas into clean, fast, and reliable interfaces.{" "}
+                  </p>
+
+                  <p className=" text-sm text-red-700  uppercase flex items-start max-[1250px]:text-lg  max-[786px]:text-sm  max-[630px]:text-xs  max-[630px]:uppercase max-[600px]:text-lg">
+                    <img src={Arrow} className="w-5 max-[1240px]:mt-1 max-[790px]:hidden max-[600px]:block   " alt="arrow" />I build with
+                    React, Tailwind, and smooth animations to deliver a great
+                    user experience.
+                  </p>
+
+                  <div className="  flex justify-end items-end  mt-28 select-none max-[1250px]:hidden ">
+                    <p className="rotate-90 uppercase text-red-700 text-center  flex items-center  ">
+                      scroll dowen
+                      <img src={Arrow} className="w-5 " alt="arrow" />
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
+          </div>
+          {/* div */}
+          <div className="border-b border-red-700 w-full h-28 flex items-center justify-center px-4 ">
+            <div className="w-full h-full border-x border-red-700 max-w-[1889px] flex items-center justify-center">
+              <h1 className="text-red-600 text-5xl uppercase font-extrabold max-[1076px]:text-3xl max-[700px]:text-2xl max-[555px]:text-lg max-[430px]:text-sm max-[340px]:text-xs ">
+                {"< Let’s bring ideas to life together />"}
+              </h1>
+            </div>
+          </div>
 
-            <div className="bg-whte w-2/4 h-full  ">
-              <div className=" w-full h-52  text-7xl text-left pt-10">
-                <h2 className="select-none
-                 uppercase text-red-700 font-medium">
-                  zouhair{" "}
-                </h2>
-                <h2 className="select-none
-                  text-red-700 font-light  font-reem mb-1"> قحطل</h2>
-                <h5 className="text-sm text-red-700  uppercase flex items-center ">
-                  <img src={Arrow} className="w-5 " alt="arrow" />A front-end
-                  developer
-                </h5>
-              </div>
-              <div className=" w-full  mt-20">
-                <p className="text-red-600 text-8xl uppercase font-extrabold italic">
-                  Transforming{" "}
-                </p>
-                <p className="text-red-600 text-4xl uppercase font-extrabold ">
-                  ideas into clean, fast, and reliable interfaces.{" "}
-                </p>
+          {/* about*/}
 
-                <p className=" text-sm text-red-700  uppercase flex items-center">
-                  <img src={Arrow} className="w-5 " alt="arrow" />I build with
-                  React, Tailwind, and smooth animations to deliver a great user
-                  experience.
-                </p>
+          <div className="border-b border-red-700 w-full  flex items-center justify-center px-4  flex-col">
+            {/*storet */}
+            <div className="w-full  border-x border-b border-red-700 max-w-[1889px] h-[800px] flex">
+              <div className="w-2/4 h-full ">
+                <h1 className="text-red-500 uppercase select-none">story</h1>
 
-                <div className="  flex justify-end items-end  mt-24 select-none">
-                  <p className="rotate-90 uppercase text-red-700 text-center  flex items-center ">
-                    scroll dowen
-                    <img src={Arrow} className="w-5 " alt="arrow" />
+                <div className="w-full  pl-5">
+                  <h1 className="text-red-700 text-4xl uppercase mt-16 italic font-bold flex items-center ml-2 font-reem ">
+                    قصة{" "}
+                    <span className="rotate-90  mt-2">
+                      {" "}
+                      <img src={Arrow} className="w-10  " alt="arrow" />
+                    </span>
+                  </h1>
+
+                  <h2
+                    className="select-none
+                 uppercase text-red-700 font-light text-3xl"
+                  >
+                    {" "}
+                    The story starts
+                  </h2>
+                  <p className="text-red-700 max-w-[450px] mt-6">
+                    when I first explored the world of web design, fascinated by
+                    how lines of code could create something interactive and
+                    beautiful. It was during my early days in tech that I
+                    realized I could combine logic and creativity. But my
+                    passion isn’t limited to screens—I also love drawing. With
+                    every stroke of a pencil, I find a way to express what words
+                    can’t.
+                  </p>
+                  <p className="text-red-600 text-4xl uppercase font-extrabold mt-10">
+                    {" "}
+                    Between coding and sketching, I’ve found a balance that
+                    keeps me inspired every day.{" "}
                   </p>
                 </div>
               </div>
+              <div className="w-2/4 h-full ">
+                <Canvas camera={{ position: [0, 1.5, 6], fov: 50 }}>
+                  <ambientLight intensity={0.3} />
+                  <directionalLight
+                    position={[5, 5, 5]}
+                    intensity={1}
+                    color="red"
+                  />
+                  <RotatingModel1 />
+                </Canvas>
+              </div>
             </div>
-          </div>
-        </div>
-        {/* div */}
-        <div className="border-b border-red-700 w-full h-28 flex items-center justify-center px-4 ">
-          <div className="w-full h-full border-x border-red-700 max-w-[1889px] flex items-center justify-center">
-            <h1 className="text-red-600 text-5xl uppercase font-extrabold  ">
-              {"< Let’s bring ideas to life — together />"}
-            </h1>
-          </div>
-        </div>
-
-        {/* about*/}
-
-        <div className="border-b border-red-700 w-full  flex items-center justify-center px-4  flex-col">
-          {/*storet */}
-          <div className="w-full  border-x border-b border-red-700 max-w-[1889px] h-[800px] flex">
-            <div className="w-2/4 h-full ">
-              <h1 className="text-red-500 uppercase select-none">story</h1>
-
-<div className="w-full  pl-5">
-
-              <h1
-              className="text-red-700 text-4xl uppercase mt-16 italic font-bold flex items-center ml-2 font-reem "
-              >
-                
-                  قصة <span className="rotate-90  mt-2">        <img src={Arrow} className="w-10  " alt="arrow" /></span></h1>
-
-
-                   <h2 className="select-none
-                 uppercase text-red-700 font-light text-3xl"> The story starts</h2>
-               <p className="text-red-700 max-w-[450px] mt-6">
-                 when I first explored the world of web design, fascinated by how lines of code could create something interactive and beautiful.
-                It was during my early days in tech that I realized I could combine logic and creativity.
-                But my passion isn’t limited to screens—I also love drawing. With every stroke of a pencil, I find a way to express what words can’t.               
-               </p>
-               <p  className="text-red-600 text-4xl uppercase font-extrabold mt-10"> Between coding and sketching, I’ve found a balance that keeps me inspired every day. </p>
-               
-                </div>
-
-
-
-
-            </div>
-             <div className="w-2/4 h-full ">
-    <Canvas camera={{ position: [0, 1.5, 6], fov: 50 }}> 
-  <ambientLight intensity={0.3} />
-  <directionalLight position={[5, 5, 5]} intensity={1} color="red" />
-  <RotatingModel1 />
-</Canvas>
-    </div>
-      </div>
-          {/*  div skills */}
-          <div className="border-b border-red-700 w-full h-28 flex items-center justify-center  ">
-            <div className="w-full h-full border-x border-red-700 max-w-[1889px]">
-              <MarqueeComponent/>
-            </div>
-          </div>
-
-          {/* project */}
-          <div className="w-full  border-x  border-red-700 max-w-[1889px] ">
-         
-
-            <div className="w-full h-[40px] ">
-              
-            <h1 className="text-red-500 uppercase">project</h1>
-
+            {/*  div skills */}
+            <div className="border-b border-red-700 w-full h-28 flex items-center justify-center  ">
+              <div className="w-full h-full border-x border-red-700 max-w-[1889px]">
+                <MarqueeComponent />
+              </div>
             </div>
 
+            {/* project */}
+            <div className="w-full  border-x  border-red-700 max-w-[1889px] ">
+              <div className="w-full h-[40px] ">
+                <h1 className="text-red-500 uppercase">project</h1>
+              </div>
 
+              <div className="w-full  ">
+                <div className=" w-full  flex flex-col">
+                  {projects.map((p, i) => (
+                    <div
+                      key={i}
+                      className=" flex items-center w-full justify-between  border-y border-red-700 "
+                    >
+                      <div className=" flex items-start  ">
+                        <h1 className="text-red-600 text-8xl uppercase font-extrabold italic">
+                          {p.name}
+                        </h1>
+                        <div className="flex mt-5 ml-1">
+                          <span className="text-red-600 ml-1 uppercase border border-red-600 rounded-full p-1 text-xs">
+                            {p.is_website ? "website" : "not a website"}
+                          </span>
+                          <span className="text-red-600  uppercase border border-red-600 rounded-full p-1 text-xs">
+                            {p.languages}
+                          </span>
+                        </div>
+                      </div>
+                      <button className="text-red-600 text-4xl uppercase font-extrabold mr-5">
+                        open
+                      </button>
+                    </div>
+                  ))}
 
-    <div className="w-full  ">
-      <div className=" w-full  flex flex-col">
-
-
-        {projects.map((p,i)=>(
-          <div key={i} className=" flex items-center w-full justify-between  border-y border-red-700 ">
-        <div className=" flex items-start  ">
-          <h1 className="text-red-600 text-8xl uppercase font-extrabold italic">{p.name}</h1>
-          <div className="flex mt-5 ml-1">
-
-          <span className="text-red-600 ml-1 uppercase border border-red-600 rounded-full p-1 text-xs">{p.is_website ? "website" : "not a website"}</span>
-          <span className="text-red-600  uppercase border border-red-600 rounded-full p-1 text-xs">{p.languages}</span>
-          </div>
-        </div>
-<button className="text-red-600 text-4xl uppercase font-extrabold mr-5">
-  open
-</button>
-        </div>
-        ))}
-
-        {/* <div className=" flex items-center w-full justify-between ">
+                  {/* <div className=" flex items-center w-full justify-between ">
         <div className=" flex items-center  ">
         <h1 className="text-red-600 text-8xl uppercase font-extrabold italic">project</h1>
         <div className="flex">
@@ -221,65 +237,48 @@ export function HomePage() {
         open
         </button>
         </div> */}
-
-
-
-      </div>
-
-
-    </div>
-
-
-
-
+                </div>
+              </div>
             </div>
+          </div>
 
-        </div>
+          {/* contact btn */}
 
-        {/* contact btn */}
-
-        <div className="border-b border-red-700 w-full h-48 flex items-center justify-center px-4 ">
-          <div className="w-full h-full border-x border-red-700 max-w-[1889px]  flex items-center justify-center">
-            <div>
-
-<img src={Arrow} className="w-15 mr-6 " alt="arrow" />
-            </div>
+          <div className="border-b border-red-700 w-full h-48 flex items-center justify-center px-4 ">
+            <div className="w-full h-full border-x border-red-700 max-w-[1889px]  flex items-center justify-center">
+              <div>
+                <img src={Arrow} className="w-15 mr-6 " alt="arrow" />
+              </div>
               <button className="uppercase py-6 px-12 rounded-md font-semibold bg-red-600">
                 contact Me!
               </button>
-<div className="rotate-180">
-
-            <img src={Arrow} className="w-15 mr-6 " alt="arrow" />
-</div>
-          </div>
-        </div>
-        {/* footer */}
-
-        <div className="border-b border-red-700 w-full h-48 flex items-center justify-center px-4 ">
-          <div className="w-full h-full border-x border-red-700 max-w-[1889px]">
-        
-
-            <div className=" w-full h-full flex justify-between items-center">
-<div className=" flex h-full items-center  gap-2 ml-5 ">
-
-          <img className="w-10" src={Instagram} alt="instagram" />
-          <img className="w-10" src={Github} alt="githube" />
-          <img className="w-10" src={Linkedin} alt="Linkedin" />
-</div>
-<div className="h-full flex items-end mb-8">
-<h1 className="text-3xl text-red-800  flex items-center mr-5 font-reem">
-  © زهير قحطل. جميع الحقوق محفوظة. ٢٠٢٥
-</h1>
-</div>
+              <div className="rotate-180">
+                <img src={Arrow} className="w-15 mr-6 " alt="arrow" />
+              </div>
             </div>
-
-
           </div>
-        </div>
+          {/* footer */}
 
-        {/* /// */}
-      </div>
-        </ClickSpark>
+          <div className="border-b border-red-700 w-full h-48 flex items-center justify-center px-4 ">
+            <div className="w-full h-full border-x border-red-700 max-w-[1889px]">
+              <div className=" w-full h-full flex justify-between items-center">
+                <div className=" flex h-full items-center  gap-2 ml-5 ">
+                  <img className="w-10" src={Instagram} alt="instagram" />
+                  <img className="w-10" src={Github} alt="githube" />
+                  <img className="w-10" src={Linkedin} alt="Linkedin" />
+                </div>
+                <div className="h-full flex items-end mb-8">
+                  <h1 className="text-3xl text-red-800  flex items-center mr-5 font-reem">
+                    © زهير قحطل. جميع الحقوق محفوظة. ٢٠٢٥
+                  </h1>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* /// */}
+        </div>
+      </ClickSpark>
     </>
   );
 }
