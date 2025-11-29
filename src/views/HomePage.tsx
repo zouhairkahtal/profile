@@ -54,7 +54,7 @@ export function HomePage() {
                   <li className=" py-4 mx-8 text-base font-semibold border-b border-red-700 hover:text-red-500 hover:border-red-500 max-[502px]:mx-2 max-[502px]:py-2 max-[502px]:text-sm">
                     HOME
                   </li>
-
+ 
                   <li>
                     <button className="bg-red-700 text-black py-4 px-8 text-base font-semibold hover:bg-red-500 max-[502px]:px-1 max-[502px]:py-2 max-[502px]:text-sm">
                       CONTACT ME
