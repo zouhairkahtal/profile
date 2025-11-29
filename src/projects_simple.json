@@ -2,66 +2,43 @@
   {
     "name": "cat-info",
     "is_website": true,
-    "languages": [
-      "TypeScript,",
-   
-      "React"
-    ]
+    "languages": ["TypeScript", "React"],
+    "link": "https://catetdog.netlify.app/"
   },
   {
     "name": "TicTac",
     "is_website": true,
-    "languages": [
-       "TypeScript,",
-   
-      "React"
-    ]
+    "languages": ["TypeScript", "React"],
+    "link": "https://tictaccasa.netlify.app/"
   },
   {
-    "name": "multi-step-form ",
+    "name": "multi-step-form",
     "is_website": true,
-    "languages": [
-       "TypeScript,",
-   
-      "React"
-    ]
+    "languages": ["TypeScript", "React"],
+    "link": "https://stepform7.netlify.app/"
   },
   {
     "name": "interactive-card",
     "is_website": true,
-    "languages": [
-   "TypeScript,",
-   
-      "React"
-    ]
+    "languages": ["TypeScript", "React"],
+    "link": "https://details-for.netlify.app/"
   },
   {
     "name": "zouhair-Portfolio1",
     "is_website": true,
-    "languages": [
-      "html,",
-      "js,",
-      "css"
-    ]
+    "languages": ["html", "js", "css"],
+    "link": "https://zouhairkahtal.github.io/zouhair-Portfolio/"
   },
   {
     "name": "repayment-calculator",
     "is_website": true,
-    "languages": [
-      "html,",
-      "js,",
-      "tailwind,",
-      "css"
-    ]
-  }
-  ,
+    "languages": ["html", "js", "tailwind", "css"],
+    "link": "https://zouhairkahtal.github.io/mortgage-repayment-calculator-main/"
+  },
   {
     "name": "age-calculator",
     "is_website": true,
-    "languages": [
-      "html,",
-      "js,",
-      "css"
-    ]
+    "languages": ["html", "js", "css"],
+    "link": "https://zouhairkahtal.github.io/age-calculator-app-main/"
   }
 ]
