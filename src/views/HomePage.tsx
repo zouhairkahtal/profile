@@ -4,37 +4,30 @@ import Me from "../assets/homePagePhoto/me.png";
 import Instagram from "../../public/svg/media/instagram-svgrepo-com.svg";
 import Github from "../../public/svg/media/github-142-svgrepo-com.svg";
 import Linkedin from "../../public/svg/media/linkedin-svgrepo-com.svg";
-
 import ClickSpark from "../components/ClickSpark";
-
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Model } from "../components/Model";
 import projects from "../projects_simple.json";
-
 import { useRef } from "react";
 import * as THREE from "three";
 import { MarqueeComponent } from "../components/Marquee";
-
 import BlurText from "../components/BlurText";
-
-
+import { motion } from "motion/react";
 
 function RotatingModel1() {
   const groupRef = useRef<THREE.Group>(null);
-const width = window.innerWidth;
-  let scale = 40
+  const width = window.innerWidth;
+  let scale = 40;
 
- console.log(width)
+  console.log(width);
 
- if(width>1000){
-  scale=50
- }else if(width>700){
-  scale=45
- }
- else{
-  scale=25
- }
-
+  if (width > 1000) {
+    scale = 50;
+  } else if (width > 700) {
+    scale = 45;
+  } else {
+    scale = 25;
+  }
 
   useFrame(() => {
     if (groupRef.current) {
@@ -43,7 +36,7 @@ const width = window.innerWidth;
   });
 
   return (
-    <group ref={groupRef}  scale={[scale, scale, scale]}>
+    <group ref={groupRef} scale={[scale, scale, scale]}>
       {" "}
       {/* hna kberna b moderate */}
       <Model />
@@ -65,21 +58,35 @@ export function HomePage() {
           {/* nav */}
           <div className="border-b border-red-700 w-full h-28 flex items-center justify-center px-4 ">
             <div className="w-full h-full border-x border-red-700 max-w-[1889px]">
-              <nav className="flex items-center justify-between ">
-                <img src={Logo} alt="logo" className=" w-48" />
+              <motion.nav
+                initial={{ opacity: 0, y: -100 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, ease: "easeInOut", delay: 0.2 }}
+                className="flex items-center justify-between "
+              >
+                <img
+              
+                  src={Logo}
+                  alt="logo"
+                  className=" w-48"
+                />
 
                 <ul className="flex text-red-700">
                   <li className=" py-4 mx-8 text-base font-semibold border-b border-red-700 hover:text-red-500 hover:border-red-500 max-[502px]:mx-2 max-[502px]:py-2 max-[502px]:text-sm max-[380px]:text-xs max-[362px]:hidden">
                     HOME
                   </li>
- 
+
                   <li>
-                    <button className="bg-red-700 text-black py-4 px-8 text-base font-semibold hover:bg-red-500 max-[502px]:px-1 max-[502px]:py-2 max-[502px]:text-sm max-[380px]:text-xs ">
+                    <motion.button
+                      whileTap={{ scale: 0.95 }}
+                      onHoverStart={() => console.log("hover started!")}
+                      className="bg-red-700 text-black py-4 px-8 text-base font-semibold hover:bg-red-500 max-[502px]:px-1 max-[502px]:py-2 max-[502px]:text-sm max-[380px]:text-xs "
+                    >
                       CONTACT ME
-                    </button>
-                  </li> 
+                    </motion.button>
+                  </li>
                 </ul>
-              </nav>
+              </motion.nav>
             </div>
           </div>
           {/* hero section */}
@@ -89,55 +96,69 @@ export function HomePage() {
             <div className="w-full h-full border-x border-red-700 max-w-[1889px] flex  max-[600px]:flex-col ">
               <div className="bg-whte w-2/4 h-full max-[1250px]:w-auto max-[600px]:w-full   ">
                 <div className="bg-red-700 max-[600px]:w-full w-[550px] h-[450px]  max-[1050px]:w-[400px]  max-[786px]:w-[300px]  max-[1050px]:h-[380px] max-[786px]:h-[250px] mt-56 max-[1250px]:mt-16  flex items-end justify-end max-[1052px]:justify-center shadow-[100px_-100px_1000px_-47px_#bb0000] max-[1250px]:w-[450px]  ">
-                  <img  src={Me} alt="me" className="max-[1050px]:w-3/4 max-[600px]:w-60" />
+                  <motion.img
+                  initial={{opacity:0,x:-50}} animate={{opacity:1,x:0}} transition={{duration:1,ease:"easeInOut",delay:0.1}}
+                    src={Me}
+                    alt="me"
+                    className="max-[1050px]:w-3/4 max-[600px]:w-60"
+                  />
                 </div>
                 <div className=" mt-10 select-none ">
-                  <h1 className="text-5xl font-extrabold text-red-700 border-b-8 border-red-700 w-12 ">
+                  <motion.h1 initial={{opacity:0,x:-50}} animate={{opacity:1,x:0}} transition={{duration:1,ease:"easeOut",delay:0.1}} className="text-5xl font-extrabold text-red-700 border-b-8 border-red-700 w-12 ">
                     ٠١
-                  </h1>
+                  </motion.h1>
                 </div>
               </div>
 
               <div className="bg-whte w-2/4 h-full  max-[1250px]:w-3/4  max-[1250px]:pl-12 max-[600px]:w-full mb-10 max-[600px]:pl-0 ">
                 <div className=" w-full h-52  text-7xl text-left pt-10  ">
-                  <h2
+                  <motion.h2 initial={{opacity:0,x:-100}} animate={{opacity:1,x:0}} transition={{duration:1,ease:"easeInOut",delay:0.1}}
                     className="select-none
-                 uppercase text-red-700 font-medium max-[850px]:text-4xl max-[600px]:w-full  max-[600px]:text-end max-[600px]:-ml-10"
+                     uppercase text-red-700 font-medium max-[850px]:text-4xl max-[600px]:w-full  max-[600px]:text-end max-[600px]:-ml-10"
                   >
                     zouhair
-                  </h2>
-                  <h2
+                  </motion.h2>
+                  <motion.h2 initial={{opacity:0,x:100}} animate={{opacity:1,x:0}} transition={{duration:1,ease:"easeInOut",delay:0.2}}
                     className="select-none
                   text-red-700 font-light  font-reem mb-1  max-[600px]:w-full  max-[600px]:text-end"
                   >
                     {" "}
                     قحطل
-                  </h2>
-                  <h5 className="text-sm text-red-700  uppercase flex items-center ">
-                    <img src={Arrow} className="w-5 " alt="arrow" />A front-end
-                    developer
-                  </h5>
+                  </motion.h2>
+                  <motion.h5 initial={{opacity:0,y:50}} animate={{opacity:1,y:0}} transition={{duration:1,ease:"easeInOut",delay:0.2}} className="text-sm text-red-700  uppercase flex items-center ">
+                    <img src={Arrow} className="w-5 " alt="arrow" />
+                    A front-end developer
+                  </motion.h5>
                 </div>
                 <div className=" w-full  mt-20 max-[1250px]:mt-4 max-[600px]:mt-0">
-                  <p className="text-red-600 text-8xl uppercase font-extrabold italic max-[1636px]:text-7xl max-[1134px]:text-4xl max-[786px]:text-2xl">
-                    Transforming{" "}
-                  </p>
-                  <p className="text-red-600 text-4xl uppercase font-extrabold max-[1636px]:text-2xl max-[786px]:text-xl">
+                 
+              <BlurText
+                text="Transforming"
+                delay={150}
+                animateBy="letters"
+                direction="top"
+                className="text-red-600 text-8xl uppercase font-extrabold italic max-[1636px]:text-7xl max-[1134px]:text-4xl max-[786px]:text-2xl"
+              />
+                  <motion.p initial={{opacity:0,y:50}} animate={{opacity:1,y:0}} transition={{duration:1,ease:"easeInOut",delay:0.1}} className="text-red-600 text-4xl uppercase font-extrabold max-[1636px]:text-2xl max-[786px]:text-xl">
                     ideas into clean, fast, and reliable interfaces.{" "}
-                  </p>
+                  </motion.p>
 
-                  <p className=" text-sm text-red-700  uppercase flex items-start max-[1250px]:text-lg  max-[786px]:text-sm  max-[630px]:text-xs  max-[630px]:uppercase max-[600px]:text-lg">
-                    <img src={Arrow} className="w-5 max-[1240px]:mt-1 max-[790px]:hidden max-[600px]:block   " alt="arrow" />I build with
-                    React, Tailwind, and smooth animations to deliver a great
-                    user experience.
-                  </p>
+                  <motion.p initial={{opacity:0,y:50}} animate={{opacity:1,y:0}} transition={{duration:1,ease:"easeInOut",delay:0.3}} className=" text-sm text-red-700  uppercase flex items-start max-[1250px]:text-lg  max-[786px]:text-sm  max-[630px]:text-xs  max-[630px]:uppercase max-[600px]:text-lg">
+                    <img
+                      src={Arrow}
+                      className="w-5 max-[1240px]:mt-1 max-[790px]:hidden max-[600px]:block   "
+                      alt="arrow"
+                    />
+                    I build with React, Tailwind, and smooth animations to
+                    deliver a great user experience.
+                  </motion.p>
 
-                  <div className="  flex justify-end items-end  mt-28 select-none max-[1250px]:hidden ">
-                    <p className="rotate-90 uppercase text-red-700 text-center  flex items-center  ">
+                  <motion.div initial={{opacity:0,x:50}} animate={{opacity:1,x:0}} transition={{duration:1,ease:"easeOut",delay:0.1}} className="  flex justify-end items-end  mt-28 select-none max-[1250px]:hidden ">
+                    <motion.p className="rotate-90 uppercase text-red-700 text-center  flex items-center  ">
                       scroll dowen
                       <img src={Arrow} className="w-5 " alt="arrow" />
-                    </p>
-                  </div>
+                    </motion.p>
+                  </motion.div>
                 </div>
               </div>
             </div>
@@ -145,19 +166,14 @@ export function HomePage() {
           {/* div */}
           <div className="border-b border-red-700 w-full h-28 flex items-center justify-center px-4 ">
             <div className="w-full h-full border-x border-red-700 max-w-[1889px] flex items-center justify-center">
-             
-            
-            <BlurText
-  text="< Let’s bring ideas to life together />"
-  delay={150}
-  animateBy="words"
-  direction="top"
-  
-  className="text-red-600 text-5xl uppercase font-extrabold max-[1076px]:text-3xl max-[700px]:text-2xl max-[555px]:text-lg max-[430px]:text-sm max-[340px]:text-xs "
-/>
+              <BlurText
+                text="< Let’s bring ideas to life together />"
+                delay={150}
+                animateBy="words"
+                direction="top"
+                className="text-red-600 text-5xl uppercase font-extrabold max-[1076px]:text-3xl max-[700px]:text-2xl max-[555px]:text-lg max-[430px]:text-sm max-[340px]:text-xs "
+              />
             </div>
-
-
           </div>
 
           {/* about*/}
@@ -166,7 +182,6 @@ export function HomePage() {
             {/*storet */}
             <div className="w-full  border-x border-b border-red-700 max-w-[1889px] h-[800px] max-[768px]:h-[1200px] max-[768px]:flex-col flex">
               <div className="w-2/4 h-full max-[768px]:w-full max-[768px]:h-[600px]">
-                <h1 className="text-red-500 uppercase select-none">story</h1>
 
                 <div className="w-full  pl-5  ">
                   <h1 className="text-red-700 text-4xl uppercase mt-16 italic font-bold flex items-center ml-2 font-reem ">
@@ -201,7 +216,7 @@ export function HomePage() {
                 </div>
               </div>
               <div className="w-2/4 h-full   max-[768px]:w-full max-[768px]:h-[600px]">
-                <Canvas  camera={{ position: [0, 1.5, 6], fov: 50 }}>
+                <Canvas camera={{ position: [0, 1.5, 6], fov: 50 }}>
                   <ambientLight intensity={0.3} />
                   <directionalLight
                     position={[5, 5, 5]}
@@ -247,14 +262,11 @@ export function HomePage() {
                       </div>
                       <button className="text-red-600 text-4xl uppercase font-extrabold mr-5 max-[1024px]:text-2xl max-[920px]:text-sm hover:text-red-800">
                         <a href={p.link} target="_blank">
-
-                        open
+                          open
                         </a>
                       </button>
                     </div>
                   ))}
-
-                
                 </div>
               </div>
             </div>
@@ -265,13 +277,21 @@ export function HomePage() {
           <div className="border-b border-red-700 w-full h-48 flex items-center justify-center px-4 ">
             <div className="w-full h-full border-x border-red-700 max-w-[1889px]  flex items-center justify-center">
               <div>
-                <img src={Arrow} className="w-15 mr-6 max-[430px]:w-8 " alt="arrow" />
+                <img
+                  src={Arrow}
+                  className="w-15 mr-6 max-[430px]:w-8 "
+                  alt="arrow"
+                />
               </div>
               <button className="uppercase py-6 px-12 max-[430px]:px-4 max-[430px]:py-3   font-semibold bg-red-600 hover:bg-red-500">
                 contact Me!
               </button>
               <div className="rotate-180">
-                <img src={Arrow} className="w-15 mr-6 max-[430px]:w-8 " alt="arrow" />
+                <img
+                  src={Arrow}
+                  className="w-15 mr-6 max-[430px]:w-8 "
+                  alt="arrow"
+                />
               </div>
             </div>
           </div>
@@ -281,9 +301,21 @@ export function HomePage() {
             <div className="w-full h-full border-x border-red-700 max-w-[1889px]">
               <div className=" w-full h-full flex justify-between items-center  ">
                 <div className=" flex  items-center   gap-2 ml-5 ">
-                  <img className="w-10 max-[530px]:w-8" src={Instagram} alt="instagram" />
-                  <img className="w-10 max-[530px]:w-8" src={Github} alt="githube" />
-                  <img className="w-10 max-[530px]:w-8" src={Linkedin} alt="Linkedin" />
+                  <img
+                    className="w-10 max-[530px]:w-8"
+                    src={Instagram}
+                    alt="instagram"
+                  />
+                  <img
+                    className="w-10 max-[530px]:w-8"
+                    src={Github}
+                    alt="githube"
+                  />
+                  <img
+                    className="w-10 max-[530px]:w-8"
+                    src={Linkedin}
+                    alt="Linkedin"
+                  />
                 </div>
                 <div className="h-full w-full  flex items-end  justify-end pb-4 ">
                   <h1 className="text-3xl text-red-800   flex items-center mr-5 max-[400px]:mr-2 font-reem max-[690px]:text-xl max-[530px]:text-sm max-[350px]:text-xs ">

@@ -9,7 +9,6 @@
   font-style: normal;
 }
 
-
 /* Make scrollbar transparent */
 ::-webkit-scrollbar {
   width: 2px;          
@@ -40,3 +39,4 @@
   background: linear-gradient(to top, white, transparent);
   pointer-events: none;
 }
+
