@@ -64,12 +64,7 @@ export function HomePage() {
                 transition={{ duration: 1, ease: "easeInOut", delay: 0.2 }}
                 className="flex items-center justify-between "
               >
-                <img
-              
-                  src={Logo}
-                  alt="logo"
-                  className=" w-48"
-                />
+                <img src={Logo} alt="logo" className=" w-48" />
 
                 <ul className="flex text-red-700">
                   <li className=" py-4 mx-8 text-base font-semibold border-b border-red-700 hover:text-red-500 hover:border-red-500 max-[502px]:mx-2 max-[502px]:py-2 max-[502px]:text-sm max-[380px]:text-xs max-[362px]:hidden">
@@ -79,7 +74,6 @@ export function HomePage() {
                   <li>
                     <motion.button
                       whileTap={{ scale: 0.95 }}
-                      onHoverStart={() => console.log("hover started!")}
                       className="bg-red-700 text-black py-4 px-8 text-base font-semibold hover:bg-red-500 max-[502px]:px-1 max-[502px]:py-2 max-[502px]:text-sm max-[380px]:text-xs "
                     >
                       CONTACT ME
@@ -97,14 +91,21 @@ export function HomePage() {
               <div className="bg-whte w-2/4 h-full max-[1250px]:w-auto max-[600px]:w-full   ">
                 <div className="bg-red-700 max-[600px]:w-full w-[550px] h-[450px]  max-[1050px]:w-[400px]  max-[786px]:w-[300px]  max-[1050px]:h-[380px] max-[786px]:h-[250px] mt-56 max-[1250px]:mt-16  flex items-end justify-end max-[1052px]:justify-center shadow-[100px_-100px_1000px_-47px_#bb0000] max-[1250px]:w-[450px]  ">
                   <motion.img
-                  initial={{opacity:0,x:-50}} animate={{opacity:1,x:0}} transition={{duration:1,ease:"easeInOut",delay:0.1}}
+                    initial={{ opacity: 0, x: -50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 1, ease: "easeInOut", delay: 0.1 }}
                     src={Me}
                     alt="me"
                     className="max-[1050px]:w-3/4 max-[600px]:w-60"
                   />
                 </div>
                 <div className=" mt-10 select-none ">
-                  <motion.h1 initial={{opacity:0,x:-50}} animate={{opacity:1,x:0}} transition={{duration:1,ease:"easeOut",delay:0.1}} className="text-5xl font-extrabold text-red-700 border-b-8 border-red-700 w-12 ">
+                  <motion.h1
+                    initial={{ opacity: 0, x: -50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 1, ease: "easeOut", delay: 0.1 }}
+                    className="text-5xl font-extrabold text-red-700 border-b-8 border-red-700 w-12 "
+                  >
                     ٠١
                   </motion.h1>
                 </div>
@@ -112,38 +113,58 @@ export function HomePage() {
 
               <div className="bg-whte w-2/4 h-full  max-[1250px]:w-3/4  max-[1250px]:pl-12 max-[600px]:w-full mb-10 max-[600px]:pl-0 ">
                 <div className=" w-full h-52  text-7xl text-left pt-10  ">
-                  <motion.h2 initial={{opacity:0,x:-100}} animate={{opacity:1,x:0}} transition={{duration:1,ease:"easeInOut",delay:0.1}}
+                  <motion.h2
+                    initial={{ opacity: 0, x: -100 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 1, ease: "easeInOut", delay: 0.1 }}
                     className="select-none
                      uppercase text-red-700 font-medium max-[850px]:text-4xl max-[600px]:w-full  max-[600px]:text-end max-[600px]:-ml-10"
                   >
                     zouhair
                   </motion.h2>
-                  <motion.h2 initial={{opacity:0,x:100}} animate={{opacity:1,x:0}} transition={{duration:1,ease:"easeInOut",delay:0.2}}
+                  <motion.h2
+                    initial={{ opacity: 0, x: 100 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 1, ease: "easeInOut", delay: 0.2 }}
                     className="select-none
                   text-red-700 font-light  font-reem mb-1  max-[600px]:w-full  max-[600px]:text-end"
                   >
                     {" "}
                     قحطل
                   </motion.h2>
-                  <motion.h5 initial={{opacity:0,y:50}} animate={{opacity:1,y:0}} transition={{duration:1,ease:"easeInOut",delay:0.2}} className="text-sm text-red-700  uppercase flex items-center ">
-                    <img src={Arrow} className="w-5 " alt="arrow" />
-                    A front-end developer
+                  <motion.h5
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1, ease: "easeInOut", delay: 0.2 }}
+                    className="text-sm text-red-700  uppercase flex items-center "
+                  >
+                    <img src={Arrow} className="w-5 " alt="arrow" />A front-end
+                    developer
                   </motion.h5>
                 </div>
                 <div className=" w-full  mt-20 max-[1250px]:mt-4 max-[600px]:mt-0">
-                 
-              <BlurText
-                text="Transforming"
-                delay={150}
-                animateBy="letters"
-                direction="top"
-                className="text-red-600 text-8xl uppercase font-extrabold italic max-[1636px]:text-7xl max-[1134px]:text-4xl max-[786px]:text-2xl"
-              />
-                  <motion.p initial={{opacity:0,y:50}} animate={{opacity:1,y:0}} transition={{duration:1,ease:"easeInOut",delay:0.1}} className="text-red-600 text-4xl uppercase font-extrabold max-[1636px]:text-2xl max-[786px]:text-xl">
+                  <BlurText
+                    text="Transforming"
+                    delay={150}
+                    animateBy="letters"
+                    direction="top"
+                    className="text-red-600 text-8xl uppercase font-extrabold italic max-[1636px]:text-7xl max-[1134px]:text-4xl max-[786px]:text-2xl"
+                  />
+                  <motion.p
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1, ease: "easeInOut", delay: 0.1 }}
+                    className="text-red-600 text-4xl uppercase font-extrabold max-[1636px]:text-2xl max-[786px]:text-xl"
+                  >
                     ideas into clean, fast, and reliable interfaces.{" "}
                   </motion.p>
 
-                  <motion.p initial={{opacity:0,y:50}} animate={{opacity:1,y:0}} transition={{duration:1,ease:"easeInOut",delay:0.3}} className=" text-sm text-red-700  uppercase flex items-start max-[1250px]:text-lg  max-[786px]:text-sm  max-[630px]:text-xs  max-[630px]:uppercase max-[600px]:text-lg">
+                  <motion.p
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1, ease: "easeInOut", delay: 0.3 }}
+                    className=" text-sm text-red-700  uppercase flex items-start max-[1250px]:text-lg  max-[786px]:text-sm  max-[630px]:text-xs  max-[630px]:uppercase max-[600px]:text-lg"
+                  >
                     <img
                       src={Arrow}
                       className="w-5 max-[1240px]:mt-1 max-[790px]:hidden max-[600px]:block   "
@@ -153,7 +174,12 @@ export function HomePage() {
                     deliver a great user experience.
                   </motion.p>
 
-                  <motion.div initial={{opacity:0,x:50}} animate={{opacity:1,x:0}} transition={{duration:1,ease:"easeOut",delay:0.1}} className="  flex justify-end items-end  mt-28 select-none max-[1250px]:hidden ">
+                  <motion.div
+                    initial={{ opacity: 0, x: 50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 1, ease: "easeOut", delay: 0.1 }}
+                    className="  flex justify-end items-end  mt-28 select-none max-[1250px]:hidden "
+                  >
                     <motion.p className="rotate-90 uppercase text-red-700 text-center  flex items-center  ">
                       scroll dowen
                       <img src={Arrow} className="w-5 " alt="arrow" />
@@ -182,7 +208,6 @@ export function HomePage() {
             {/*storet */}
             <div className="w-full  border-x border-b border-red-700 max-w-[1889px] h-[800px] max-[768px]:h-[1200px] max-[768px]:flex-col flex">
               <div className="w-2/4 h-full max-[768px]:w-full max-[768px]:h-[600px]">
-
                 <div className="w-full  pl-5  ">
                   <h1 className="text-red-700 text-4xl uppercase mt-16 italic font-bold flex items-center ml-2 font-reem ">
                     قصة{" "}
@@ -208,11 +233,15 @@ export function HomePage() {
                     every stroke of a pencil, I find a way to express what words
                     can’t.
                   </p>
-                  <p className="text-red-600 text-4xl uppercase font-extrabold mt-10">
-                    {" "}
-                    Between coding and sketching, I’ve found a balance that
-                    keeps me inspired every day.{" "}
-                  </p>
+
+                  <BlurText
+                    text=" Between coding and sketching,
+       I’ve found a balance that keeps       me inspired every day."
+                    delay={50}
+                    animateBy="letters"
+                    direction="top"
+                    className="text-red-600 text-4xl uppercase font-extrabold mt-10 "
+                  />
                 </div>
               </div>
               <div className="w-2/4 h-full   max-[768px]:w-full max-[768px]:h-[600px]">
@@ -283,9 +312,15 @@ export function HomePage() {
                   alt="arrow"
                 />
               </div>
-              <button className="uppercase py-6 px-12 max-[430px]:px-4 max-[430px]:py-3   font-semibold bg-red-600 hover:bg-red-500">
+              <motion.button
+                initial={{ opacity: 0 }}
+                whileHover={{ backgroundColor: "rgba(220, 220, 220, 1)",scale: 1.1 }}
+                whileTap={{ backgroundColor: "rgba(255, 255, 255, 1)",scale: 0.9 }}
+                whileInView={{ opacity: 1 }}
+                className="uppercase py-6 px-12 max-[430px]:px-4 max-[430px]:py-3   font-semibold bg-red-600 hover:bg-red-500"
+              >
                 contact Me!
-              </button>
+              </motion.button>
               <div className="rotate-180">
                 <img
                   src={Arrow}
