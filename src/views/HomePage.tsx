@@ -182,7 +182,15 @@ export function HomePage() {
                   >
                     <motion.p className="rotate-90 uppercase text-red-700 text-center  flex items-center  ">
                       scroll dowen
-                      <img src={Arrow} className="w-5 " alt="arrow" />
+                      <motion.img 
+                        animate={{x:[10,0,10],}}
+                transition={{
+                duration:1,
+                ease:'easeIn',
+              
+                repeat:Infinity
+                }}
+                      src={Arrow} className="w-5 " alt="arrow" />
                     </motion.p>
                   </motion.div>
                 </div>
@@ -235,10 +243,9 @@ export function HomePage() {
                   </p>
 
                   <BlurText
-                    text=" Between coding and sketching,
-       I’ve found a balance that keeps       me inspired every day."
+                    text=" Between coding and sketching, I’ve found a balance that keeps me inspired every day."
                     delay={50}
-                    animateBy="letters"
+                    animateBy="words"
                     direction="top"
                     className="text-red-600 text-4xl uppercase font-extrabold mt-10 "
                   />
@@ -306,25 +313,47 @@ export function HomePage() {
           <div className="border-b border-red-700 w-full h-48 flex items-center justify-center px-4 ">
             <div className="w-full h-full border-x border-red-700 max-w-[1889px]  flex items-center justify-center">
               <div>
-                <img
+                <motion.img
+
+                  animate={{x:[-30,0,-30],scale:[0.9,1,0.9]}}
+                transition={{
+                duration:1,
+                ease:'easeIn',
+              
+                repeat:Infinity
+                }}
                   src={Arrow}
-                  className="w-15 mr-6 max-[430px]:w-8 "
+                  className="w-12 mr-6 max-[430px]:w-8 "
                   alt="arrow"
                 />
               </div>
               <motion.button
                 initial={{ opacity: 0 }}
-                whileHover={{ backgroundColor: "rgba(220, 220, 220, 1)",scale: 1.1 }}
-                whileTap={{ backgroundColor: "rgba(255, 255, 255, 1)",scale: 0.9 }}
+                whileHover={{
+                  backgroundColor: "rgba(220, 220, 220, 1)",
+                  scale: 1.1,
+                }}
+                whileTap={{
+                  backgroundColor: "#bb0000",
+                  scale: 0.9,
+                }}
                 whileInView={{ opacity: 1 }}
                 className="uppercase py-6 px-12 max-[430px]:px-4 max-[430px]:py-3   font-semibold bg-red-600 hover:bg-red-500"
               >
                 contact Me!
               </motion.button>
               <div className="rotate-180">
-                <img
+                <motion.img
+
+                animate={{x:[-30,0,-30],scale:[0.9,1,0.9]}}
+                transition={{
+                duration:1,
+                ease:'easeIn',
+              
+                repeat:Infinity
+                }}
                   src={Arrow}
-                  className="w-15 mr-6 max-[430px]:w-8 "
+                  className="w-12 mr-6 max-[430px]:w-8 "
                   alt="arrow"
                 />
               </div>
