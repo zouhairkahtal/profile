@@ -54,7 +54,7 @@ export function HomePage() {
         sparkCount={6}
         duration={300}
       >
-        <div className="bg-black w-full  flex flex-col">
+        <div className="bg-black w-full  flex flex-col ">
           {/* nav */}
           <div className="border-b border-red-700 w-full h-28 flex items-center justify-center px-4 ">
             <div className="w-full h-full border-x border-red-700 max-w-[1889px]">
