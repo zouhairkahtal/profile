@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { HomePage } from "./views/HomePage";
 import { Layout } from "./Layout";
+import { Contact } from "./views/Contact";
 
 
 function App() {
@@ -18,10 +19,10 @@ function App() {
       //     path: "HomePage",
       //     element: <HomePage />,
       //   },
-      //   {
-      //     path: "Gallery",
-      //     element: <CatGallery />,
-      //   },
+        {
+          path: "contact",
+          element: <Contact />,
+        },
       //   {
       //     path: "DogPage",
       //     element: <DogPage />,

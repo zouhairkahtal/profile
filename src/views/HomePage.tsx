@@ -13,6 +13,7 @@ import * as THREE from "three";
 import { MarqueeComponent } from "../components/Marquee";
 import BlurText from "../components/BlurText";
 import { motion } from "motion/react";
+import { NavLink } from "react-router-dom";
 
 function RotatingModel1() {
   const groupRef = useRef<THREE.Group>(null);
@@ -48,7 +49,7 @@ export function HomePage() {
   return (
     <>
       <ClickSpark
-        sparkColor="#bb0000"
+        sparkColor="#b91c1c"
         sparkSize={20}
         sparkRadius={50}
         sparkCount={6}
@@ -56,8 +57,8 @@ export function HomePage() {
       >
         <div className="bg-black w-full  flex flex-col ">
           {/* nav */}
-          <div className="border-b border-red-700 w-full h-28 flex items-center justify-center px-4 ">
-            <div className="w-full h-full border-x border-red-700 max-w-[1889px]">
+          <div className="border-b border-primary w-full h-28 flex items-center justify-center px-4 ">
+            <div className="w-full h-full border-x border-primary max-w-[1889px]">
               <motion.nav
                 initial={{ opacity: 0, y: -100 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -66,18 +67,21 @@ export function HomePage() {
               >
                 <img src={Logo} alt="logo" className=" w-48" />
 
-                <ul className="flex text-red-700">
-                  <li className=" py-4 mx-8 text-base font-semibold border-b border-red-700 hover:text-red-500 hover:border-red-500 max-[502px]:mx-2 max-[502px]:py-2 max-[502px]:text-sm max-[380px]:text-xs max-[362px]:hidden">
+                <ul className="flex text-primary">
+                  <li className=" py-4 mx-8 text-base font-semibold border-b border-primary hover:text-secondary hover:border-secondary max-[502px]:mx-2 max-[502px]:py-2 max-[502px]:text-sm max-[380px]:text-xs max-[362px]:hidden">
                     HOME
                   </li>
 
                   <li>
+                      <NavLink to="/contact" >
+          
                     <motion.button
                       whileTap={{ scale: 0.95 }}
-                      className="bg-red-700 text-black py-4 px-8 text-base font-semibold hover:bg-red-500 max-[502px]:px-1 max-[502px]:py-2 max-[502px]:text-sm max-[380px]:text-xs "
-                    >
+                      className="bg-primary text-black py-4 px-8 text-base font-semibold hover:bg-secondary max-[502px]:px-1 max-[502px]:py-2 max-[502px]:text-sm max-[380px]:text-xs "
+                      >
                       CONTACT ME
                     </motion.button>
+                      </NavLink>
                   </li>
                 </ul>
               </motion.nav>
@@ -85,11 +89,11 @@ export function HomePage() {
           </div>
           {/* hero section */}
           <div
-            className={`border-b border-red-700 w-full  flex items-center justify-center   px-4 bg-[url('../public/svg/backGroundSvg.svg')]  `}
+            className={`border-b border-primary w-full  flex items-center justify-center   px-4 bg-[url('../public/svg/backGroundSvg.svg')]  `}
           >
-            <div className="w-full h-full border-x border-red-700 max-w-[1889px] flex  max-[600px]:flex-col ">
+            <div className="w-full h-full border-x border-primary max-w-[1889px] flex  max-[600px]:flex-col ">
               <div className="bg-whte w-2/4 h-full max-[1250px]:w-auto max-[600px]:w-full   ">
-                <div className="bg-red-700 max-[600px]:w-full w-[550px] h-[450px]  max-[1050px]:w-[400px]  max-[786px]:w-[300px]  max-[1050px]:h-[380px] max-[786px]:h-[250px] mt-56 max-[1250px]:mt-16  flex items-end justify-end max-[1052px]:justify-center shadow-[100px_-100px_1000px_-47px_#bb0000] max-[1250px]:w-[450px]  ">
+                <div className="bg-primary max-[600px]:w-full w-[550px] h-[450px]  max-[1050px]:w-[400px]  max-[786px]:w-[300px]  max-[1050px]:h-[380px] max-[786px]:h-[250px] mt-56 max-[1250px]:mt-16  flex items-end justify-end max-[1052px]:justify-center shadow-[100px_-100px_1000px_-47px_#bb0000] max-[1250px]:w-[450px]  ">
                   <motion.img
                     initial={{ opacity: 0, x: -50 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -104,7 +108,7 @@ export function HomePage() {
                     initial={{ opacity: 0, x: -50 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1, ease: "easeOut", delay: 0.1 }}
-                    className="text-5xl font-extrabold text-red-700 border-b-8 border-red-700 w-12 "
+                    className="text-5xl font-extrabold text-primary border-b-8 border-primary w-12 "
                   >
                     ٠١
                   </motion.h1>
@@ -118,7 +122,7 @@ export function HomePage() {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1, ease: "easeInOut", delay: 0.1 }}
                     className="select-none
-                     uppercase text-red-700 font-medium max-[850px]:text-4xl max-[600px]:w-full  max-[600px]:text-end max-[600px]:-ml-10"
+                     uppercase text-primary font-medium max-[850px]:text-4xl max-[600px]:w-full  max-[600px]:text-end max-[600px]:-ml-10"
                   >
                     zouhair
                   </motion.h2>
@@ -127,7 +131,7 @@ export function HomePage() {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1, ease: "easeInOut", delay: 0.2 }}
                     className="select-none
-                  text-red-700 font-light  font-reem mb-1  max-[600px]:w-full  max-[600px]:text-end"
+                  text-primary font-light  font-reem mb-1  max-[600px]:w-full  max-[600px]:text-end"
                   >
                     {" "}
                     قحطل
@@ -136,7 +140,7 @@ export function HomePage() {
                     initial={{ opacity: 0, y: 50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, ease: "easeInOut", delay: 0.2 }}
-                    className="text-sm text-red-700  uppercase flex items-center "
+                    className="text-sm text-primary  uppercase flex items-center "
                   >
                     <img src={Arrow} className="w-5 " alt="arrow" />A front-end
                     developer
@@ -148,13 +152,13 @@ export function HomePage() {
                     delay={150}
                     animateBy="letters"
                     direction="top"
-                    className="text-red-600 text-8xl uppercase font-extrabold italic max-[1636px]:text-7xl max-[1134px]:text-4xl max-[786px]:text-2xl"
+                    className="text-secondary text-8xl uppercase font-extrabold italic max-[1636px]:text-7xl max-[1134px]:text-4xl max-[786px]:text-2xl"
                   />
                   <motion.p
                     initial={{ opacity: 0, y: 50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, ease: "easeInOut", delay: 0.1 }}
-                    className="text-red-600 text-4xl uppercase font-extrabold max-[1636px]:text-2xl max-[786px]:text-xl"
+                    className="text-secondary text-4xl uppercase font-extrabold max-[1636px]:text-2xl max-[786px]:text-xl"
                   >
                     ideas into clean, fast, and reliable interfaces.{" "}
                   </motion.p>
@@ -163,7 +167,7 @@ export function HomePage() {
                     initial={{ opacity: 0, y: 50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, ease: "easeInOut", delay: 0.3 }}
-                    className=" text-sm text-red-700  uppercase flex items-start max-[1250px]:text-lg  max-[786px]:text-sm  max-[630px]:text-xs  max-[630px]:uppercase max-[600px]:text-lg"
+                    className=" text-sm text-primary  uppercase flex items-start max-[1250px]:text-lg  max-[786px]:text-sm  max-[630px]:text-xs  max-[630px]:uppercase max-[600px]:text-lg"
                   >
                     <img
                       src={Arrow}
@@ -180,7 +184,7 @@ export function HomePage() {
                     transition={{ duration: 1, ease: "easeOut", delay: 0.1 }}
                     className="  flex justify-end items-end  mt-28 select-none max-[1250px]:hidden "
                   >
-                    <motion.p className="rotate-90 uppercase text-red-700 text-center  flex items-center  ">
+                    <motion.p className="rotate-90 uppercase text-primary text-center  flex items-center  ">
                       scroll dowen
                       <motion.img 
                         animate={{x:[10,0,10],}}
@@ -198,26 +202,26 @@ export function HomePage() {
             </div>
           </div>
           {/* div */}
-          <div className="border-b border-red-700 w-full h-28 flex items-center justify-center px-4 ">
-            <div className="w-full h-full border-x border-red-700 max-w-[1889px] flex items-center justify-center">
+          <div className="border-b border-primary w-full h-28 flex items-center justify-center px-4 ">
+            <div className="w-full h-full border-x border-primary max-w-[1889px] flex items-center justify-center">
               <BlurText
                 text="< Let’s bring ideas to life together />"
                 delay={150}
                 animateBy="words"
                 direction="top"
-                className="text-red-600 text-5xl uppercase font-extrabold max-[1076px]:text-3xl max-[700px]:text-2xl max-[555px]:text-lg max-[430px]:text-sm max-[340px]:text-xs "
+                className="text-secondary text-5xl uppercase font-extrabold max-[1076px]:text-3xl max-[700px]:text-2xl max-[555px]:text-lg max-[430px]:text-sm max-[340px]:text-xs "
               />
             </div>
           </div>
 
           {/* about*/}
 
-          <div className="border-b border-red-700 w-full  flex items-center justify-center px-4  flex-col">
+          <div className="border-b border-primary w-full  flex items-center justify-center px-4  flex-col">
             {/*storet */}
-            <div className="w-full  border-x border-b border-red-700 max-w-[1889px] h-[800px] max-[768px]:h-[1200px] max-[768px]:flex-col flex">
+            <div className="w-full  border-x border-b border-primary max-w-[1889px] h-[800px] max-[768px]:h-[1200px] max-[768px]:flex-col flex">
               <div className="w-2/4 h-full max-[768px]:w-full max-[768px]:h-[600px]">
                 <div className="w-full  pl-5  ">
-                  <h1 className="text-red-700 text-4xl uppercase mt-16 italic font-bold flex items-center ml-2 font-reem ">
+                  <h1 className="text-primary text-4xl uppercase mt-16 italic font-bold flex items-center ml-2 font-reem ">
                     قصة{" "}
                     <span className="rotate-90  mt-2">
                       {" "}
@@ -227,12 +231,12 @@ export function HomePage() {
 
                   <h2
                     className="select-none
-                 uppercase text-red-700 font-light text-3xl"
+                 uppercase text-primary font-light text-3xl"
                   >
                     {" "}
                     The story starts
                   </h2>
-                  <p className="text-red-700 max-w-[450px] mt-6">
+                  <p className="text-primary max-w-[450px] mt-6">
                     when I first explored the world of web design, fascinated by
                     how lines of code could create something interactive and
                     beautiful. It was during my early days in tech that I
@@ -247,7 +251,7 @@ export function HomePage() {
                     delay={50}
                     animateBy="words"
                     direction="top"
-                    className="text-red-600 text-4xl uppercase font-extrabold mt-10 "
+                    className="text-secondary text-4xl uppercase font-extrabold mt-10 "
                   />
                 </div>
               </div>
@@ -264,16 +268,16 @@ export function HomePage() {
               </div>
             </div>
             {/*  div skills */}
-            <div className="border-b border-red-700 w-full h-28 flex items-center justify-center  ">
-              <div className="w-full h-full border-x border-red-700 max-w-[1889px]">
+            <div className="border-b border-primary w-full h-28 flex items-center justify-center  ">
+              <div className="w-full h-full border-x border-primary max-w-[1889px]">
                 <MarqueeComponent />
               </div>
             </div>
 
             {/* project */}
-            <div className="w-full  border-x  border-red-700 max-w-[1889px] ">
+            <div className="w-full  border-x  border-primary max-w-[1889px] ">
               <div className="w-full h-[40px] ">
-                <h1 className="text-red-500 uppercase">project</h1>
+                <h1 className="text-secondary uppercase">project</h1>
               </div>
 
               <div className="w-full  ">
@@ -281,22 +285,22 @@ export function HomePage() {
                   {projects.map((p, i) => (
                     <div
                       key={i}
-                      className=" flex items-center w-full justify-between  border-y border-red-700 "
+                      className=" flex items-center w-full justify-between  border-y border-primary "
                     >
                       <div className=" flex items-start  ">
-                        <h1 className="text-red-600 text-8xl uppercase font-extrabold italic max-[1650px]:text-5xl max-[920px]:text-3xl ">
+                        <h1 className="text-secondary text-8xl uppercase font-extrabold italic max-[1650px]:text-5xl max-[920px]:text-3xl ">
                           {p.name}
                         </h1>
                         <div className="flex mt-5 max-[920px]:mt-2 ml-1 max-[650px]:hidden">
-                          <span className="text-red-600 ml-1 uppercase border border-red-600 rounded-full p-1 text-xs max-[1024px]:text-[9px] max-[1024px]:p-0 max-[1024px]:px-1 ">
+                          <span className="text-secondary ml-1 uppercase border border-secondary rounded-full p-1 text-xs max-[1024px]:text-[9px] max-[1024px]:p-0 max-[1024px]:px-1 ">
                             {p.is_website ? "website" : "not a website"}
                           </span>
-                          <span className="text-red-600  uppercase border border-red-600 rounded-full p-1 text-xs max-[1024px]:text-[9px] max-[1024px]:p-0 max-[1024px]:px-1  ">
+                          <span className="text-secondary  uppercase border border-secondary rounded-full p-1 text-xs max-[1024px]:text-[9px] max-[1024px]:p-0 max-[1024px]:px-1  ">
                             {p.languages}
                           </span>
                         </div>
                       </div>
-                      <button className="text-red-600 text-4xl uppercase font-extrabold mr-5 max-[1024px]:text-2xl max-[920px]:text-sm hover:text-red-800">
+                      <button className="text-secondary text-4xl uppercase font-extrabold mr-5 max-[1024px]:text-2xl max-[920px]:text-sm hover:text-red-800">
                         <a href={p.link} target="_blank">
                           open
                         </a>
@@ -310,8 +314,8 @@ export function HomePage() {
 
           {/* contact btn */}
 
-          <div className="border-b border-red-700 w-full h-48 flex items-center justify-center px-4 ">
-            <div className="w-full h-full border-x border-red-700 max-w-[1889px]  flex items-center justify-center">
+          <div className="border-b border-primary w-full h-48 flex items-center justify-center px-4 ">
+            <div className="w-full h-full border-x border-primary max-w-[1889px]  flex items-center justify-center">
               <div>
                 <motion.img
 
@@ -338,7 +342,7 @@ export function HomePage() {
                   scale: 0.9,
                 }}
                 whileInView={{ opacity: 1 }}
-                className="uppercase py-6 px-12 max-[430px]:px-4 max-[430px]:py-3   font-semibold bg-red-600 hover:bg-red-500"
+                className="uppercase py-6 px-12 max-[430px]:px-4 max-[430px]:py-3   font-semibold bg-secondary hover:bg-secondary"
               >
                 contact Me!
               </motion.button>
@@ -361,8 +365,8 @@ export function HomePage() {
           </div>
           {/* footer */}
 
-          <div className="border-b border-red-700 w-full h-48 flex items-center justify-center px-4 ">
-            <div className="w-full h-full border-x border-red-700 max-w-[1889px]">
+          <div className="border-b border-primary w-full h-48 flex items-center justify-center px-4 ">
+            <div className="w-full h-full border-x border-primary max-w-[1889px]">
               <div className=" w-full h-full flex justify-between items-center  ">
                 <div className=" flex  items-center   gap-2 ml-5 ">
                   <img
