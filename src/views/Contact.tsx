@@ -65,13 +65,10 @@ export function Contact() {
           />
         </div>
         <div className="bg-black w-full flex flex-col">
-          {/* nav */}
-          <div className="border-b border-primary w-full h-20 flex items-center justify-center px-4">
-            <div className="w-full h-full border-x border-primary max-w-[1889px]"></div>
-          </div>
+          
           {/* form */}
-          <div className="border-b border-primary w-full flex items-center justify-center px-4">
-            <div className="w-full h-[80vh] min-h-[800px] border-x border-primary max-w-[1889px] flex max-[600px]:flex-col items-center justify-center">
+          <div className="w-full flex items-center justify-center px-4">
+            <div className="w-full h-screen min-h-[800px]  border-primary max-w-[1889px] flex max-[600px]:flex-col items-center justify-center">
               <form
                 onSubmit={handleSubmit(onSubmit)}
                 className="flex flex-col gap-6 w-[500px] max-[600px]:w-full p-6 border border-primary rounded-lg"
@@ -134,9 +131,7 @@ export function Contact() {
             </div>
           </div>
 
-          <div className="w-full h-20 flex items-center justify-center px-4">
-            <div className="w-full h-full border-x border-primary max-w-[1889px]"></div>
-          </div>
+        
         </div>
       </ClickSpark>
     </>
