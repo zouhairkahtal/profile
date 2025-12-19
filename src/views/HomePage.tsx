@@ -185,7 +185,7 @@ export function HomePage() {
                     className="  flex justify-end items-end  mt-28 select-none max-[1250px]:hidden "
                   >
                     <motion.p className="rotate-90 uppercase text-primary text-center  flex items-center  ">
-                      scroll dowen
+                      scroll down
                       <motion.img 
                         animate={{x:[10,0,10],}}
                 transition={{
