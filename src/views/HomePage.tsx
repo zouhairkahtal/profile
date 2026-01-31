@@ -15,6 +15,12 @@ import BlurText from "../components/BlurText";
 import { motion } from "motion/react";
 import { NavLink } from "react-router-dom";
 
+
+import {FramerCarousel} from "../components/Carousel"
+
+
+
+
 function RotatingModel1() {
   const groupRef = useRef<THREE.Group>(null);
   const width = window.innerWidth;
@@ -219,8 +225,11 @@ export function HomePage() {
           <div className="border-b border-primary w-full  flex items-center justify-center px-4  flex-col">
             {/*storet */}
             <div className="w-full  border-x border-b border-primary max-w-[1889px] h-[800px] max-[768px]:h-[1200px] max-[768px]:flex-col flex">
-              <div className="w-2/4 h-full max-[768px]:w-full max-[768px]:h-[600px]">
-                <div className="w-full  pl-5  ">
+              
+              
+              
+              <div className="w-2/4 h-full max-[768px]:w-full max-[768px]:h-[800px] ">
+                {/* <div className="w-full  pl-5  ">
                   <h1 className="text-primary text-4xl uppercase mt-16 italic font-bold flex items-center ml-2 font-reem ">
                     قصة{" "}
                     <span className="rotate-90  mt-2">
@@ -253,8 +262,18 @@ export function HomePage() {
                     direction="top"
                     className="text-secondary text-4xl uppercase font-extrabold mt-10 "
                   />
-                </div>
+                </div> */}
+
+
+
+
+
+                  <FramerCarousel />
               </div>
+
+
+
+
               <div className="w-2/4 h-full   max-[768px]:w-full max-[768px]:h-[600px]">
                 <Canvas camera={{ position: [0, 1.5, 6], fov: 50 }}>
                   <ambientLight intensity={0.3} />
@@ -277,7 +296,7 @@ export function HomePage() {
             {/* project */}
             <div className="w-full  border-x  border-primary max-w-[1889px] ">
               <div className="w-full h-[40px] ">
-                <h1 className="text-secondary uppercase">project</h1>
+                <h1 className="text-secondary uppercase">project's</h1>
               </div>
 
               <div className="w-full  ">
@@ -369,21 +388,30 @@ export function HomePage() {
             <div className="w-full h-full border-x border-primary max-w-[1889px]">
               <div className=" w-full h-full flex justify-between items-center  ">
                 <div className=" flex  items-center   gap-2 ml-5 ">
+                  <a href="https://www.instagram.com/zouhair.k.18/" target="_blank">
+
                   <img
                     className="w-10 max-[530px]:w-8"
                     src={Instagram}
                     alt="instagram"
-                  />
+                    />
+                    </a>
+                    <a href="https://github.com/zouhairkahtal" target="_blank">
+
                   <img
                     className="w-10 max-[530px]:w-8"
                     src={Github}
                     alt="githube"
-                  />
+                    />
+                    </a>
+                    <a href="https://www.linkedin.com/in/zouhair-kahtal-98084b337/" target="_blank">
+
                   <img
                     className="w-10 max-[530px]:w-8"
                     src={Linkedin}
                     alt="Linkedin"
-                  />
+                    />
+                    </a>
                 </div>
                 <div className="h-full w-full  flex items-end  justify-end pb-4 ">
                   <h1 className="text-3xl text-red-800   flex items-center mr-5 max-[400px]:mr-2 font-reem max-[690px]:text-xl max-[530px]:text-sm max-[350px]:text-xs ">
