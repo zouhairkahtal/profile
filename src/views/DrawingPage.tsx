@@ -11,7 +11,7 @@ export function Drawingpage() {
     const handleScroll = () => {
       const scrollTop = window.scrollY; 
       const fadeStart = 50; 
-      const fadeEnd = 1000;
+      const fadeEnd = 800;
       let newOpacity = 1;
 
       if (scrollTop > fadeStart) {

@@ -5,11 +5,9 @@ export default function DrawingGrid() {
   return (
  
      <div className="w-full" style={{ height: '640px',width:"2000px", position: 'relative' }}>
-  <CircularGallery bend={3} textColor="#ffffff" borderRadius={0.05} scrollEase={0.02}
-  bend={0}
-  borderRadius={0.04}
-  scrollSpeed={1.2}
-  scrollEase={0.07}
+  <CircularGallery bend={2} textColor="#ffffff" borderRadius={0.05} scrollEase={0.02}
+  
+
 />
 </div>
 
