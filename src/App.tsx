@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { HomePage } from "./views/HomePage";
 import { Layout } from "./Layout";
 import { Contact } from "./views/Contact";
+import { Drawingpage } from "./views/DrawingPage";
 
 
 function App() {
@@ -23,26 +24,11 @@ function App() {
           path: "contact",
           element: <Contact />,
         },
-      //   {
-      //     path: "DogPage",
-      //     element: <DogPage />,
-      //   },
-      //   {
-      //     path: "catPage",
-      //     element: <CatPage />,
-      //   },
-      //   {
-      //     path: "CatInfo",
-      //     element: <CAtInfo />,
-      //   },
-      //   {
-      //     path: "DogInfo",
-      //     element: <DogInfo />,
-      //   },
-      //   {
-      //     path: "DogGallery",
-      //     element: <DogGallery />,
-      //   },
+        {
+          path: "DrawingPage",
+          element: <Drawingpage />,
+        },
+   
         {
           path: "*",
           element: (

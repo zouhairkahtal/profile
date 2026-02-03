@@ -63,7 +63,20 @@ import Linkedin from "../../public/svg/media/linkedin-svgrepo-com.svg";
          Location:<span className='text-secondary text-3xl'> Casablanca, Morocco</span>
         </h1>
         <h1  className="text-primary text-4xl uppercase font-bold mt-5 max-[1076px]:text-3xl max-[700px]:text-2xl max-[555px]:text-lg ">
-    hobbies: <span className='text-secondary text-3xl'> drawing, programming </span>
+    hobbies: <span className='text-secondary text-3xl'>
+      
+      <NavLink to={"/DrawingPage"}>
+
+       <span className='hover:bg-primary hover:text-black hover:cursor-pointer'>drawing</span>
+      </NavLink>
+       
+       , <span
+       className='hover:bg-primary hover:text-black hover:cursor-pointer'
+       >programming</span> 
+       
+       
+       
+       </span>
         </h1>
         <h1  className="text-primary text-4xl uppercase font-bold mt-5 max-[1076px]:text-3xl max-[700px]:text-2xl max-[555px]:text-lg ">
    age: <span className='text-secondary text-3xl'> <span className='text-3xl  font-extrabold  text-primary'> ١٩</span> years old</span>
