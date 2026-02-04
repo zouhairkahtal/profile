@@ -1,4 +1,4 @@
-'use client';
+
 import { useEffect, useRef, useState } from 'react';
 import { motion, useMotionValue, animate } from 'motion/react';
 import BlurText from "../components/BlurText";
@@ -8,11 +8,14 @@ import Instagram from "../../public/svg/media/instagram-svgrepo-com.svg";
 import Github from "../../public/svg/media/github-142-svgrepo-com.svg";
 import Linkedin from "../../public/svg/media/linkedin-svgrepo-com.svg";
 
+
+
+
  const items = [
   {
     id:1,
     div: (
-      <div className="w-full h-full pl-5  ">
+      <div className="w-full h-full pl-5  " >
         <h1 className="text-primary text-4xl uppercase mt-16 italic font-bold flex items-center ml-2 font-reem">
           قصة
           <span className="rotate-90 mt-2">
@@ -24,7 +27,7 @@ import Linkedin from "../../public/svg/media/linkedin-svgrepo-com.svg";
           The story starts
         </h2>
 
-        <p className="text-primary max-w-[450px] mt-6">
+        <p className="text-primary max-w-[450px] mt-6" >
           when I first explored the world of web design, fascinated by how lines
           of code could create something interactive and beautiful. It was
           during my early days in tech that I realized I could combine logic and
@@ -65,14 +68,16 @@ import Linkedin from "../../public/svg/media/linkedin-svgrepo-com.svg";
         <h1  className="text-primary text-4xl uppercase font-bold mt-5 max-[1076px]:text-3xl max-[700px]:text-2xl max-[555px]:text-lg ">
     hobbies: <span className='text-secondary text-3xl'>
       
-      <NavLink to={"/DrawingPage"}>
+      <NavLink to={"/DrawingPage"}
+    
+      >
 
        <span className='hover:bg-primary hover:text-black hover:cursor-pointer'>drawing</span>
       </NavLink>
        
        , <span
        className='hover:bg-primary hover:text-black hover:cursor-pointer'
-       >programming</span> 
+       ><a href="#project"> programming</a></span> 
        
        
        

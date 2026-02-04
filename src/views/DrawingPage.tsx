@@ -1,10 +1,15 @@
 import ClickSpark from "../components/ClickSpark";
 import DrawingGrid from "../components/DrawingGrid";
 import { useState, useEffect } from 'react';
+import { useLocation } from "react-router-dom";
 
 export function Drawingpage() {
 
+  const { pathname } = useLocation();
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]); 
   const [opacity, setOpacity] = useState(1);
 
   useEffect(() => {
@@ -33,7 +38,7 @@ export function Drawingpage() {
 
         <div className="w-full  " style={{ opacity }}>
           <div className="w-full flex items-center justify-center"     >
-            <div className="bg-gray-950 w-full max-w-[1500px] h-48 rounded-b-[40px] flex flex-col items-center justify-center">
+            <div  className="bg-gray-950 w-full max-w-[1500px] h-48 rounded-b-[40px] flex flex-col items-center justify-center">
               <h1 className="text-white text-5xl uppercase font-medium mb-4  max-[1636px]:text-2xl max-[786px]:text-xl">
                 fjozf fnreoif fioerjeji
               </h1>
@@ -53,7 +58,7 @@ export function Drawingpage() {
         
                   </div>
 
-<div className="mt-20 w-full h-[800px] bg-red-200">
+<div data-aos="fade-uo" className="mt-20 w-full h-[800px] bg-red-200 ">
 
 
 </div>

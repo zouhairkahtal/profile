@@ -26,6 +26,7 @@ function RotatingModel1() {
   const width = window.innerWidth;
   let scale = 40;
 
+ 
   console.log(width);
 
   if (width > 1000) {
@@ -294,7 +295,7 @@ export function HomePage() {
             </div>
 
             {/* project */}
-            <div className="w-full  border-x  border-primary max-w-[1889px] ">
+            <div className="w-full  border-x  border-primary max-w-[1889px] " id="project">
               <div className="w-full h-[40px] ">
                 <h1 className="text-secondary uppercase">project's</h1>
               </div>
@@ -307,7 +308,7 @@ export function HomePage() {
                       className=" flex items-center w-full justify-between  border-y border-primary "
                     >
                       <div className=" flex items-start  ">
-                        <h1 className="text-secondary text-8xl uppercase font-extrabold italic max-[1650px]:text-5xl max-[920px]:text-3xl ">
+                        <h1  className="text-secondary text-8xl uppercase font-extrabold italic max-[1650px]:text-5xl max-[920px]:text-3xl ">
                           {p.name}
                         </h1>
                         <div className="flex mt-5 max-[920px]:mt-2 ml-1 max-[650px]:hidden">
